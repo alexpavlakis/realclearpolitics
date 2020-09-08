@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1599594412556.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B1E8DFEF",
+    "lastKnownWriteTime" : 1599595024,
+    "last_content_update" : 1599595024779,
+    "path" : "~/Git/realclearpolitics/R/globals.R",
+    "project_path" : "R/globals.R",
+    "properties" : {
+        "cursorPosition" : "4,45",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,57 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# realclearpolitics
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of realclearpolitics is to make it easy to download poll data and moving averages from realclearpolitics.com
+
+## Installation
+
+You can install the development version with
+
+``` r
+devtools::install_github("alexpavlakis/realclearpolitics")
+```
+
+## Example
+
+If we want to scrape the RCP table of national polls from the 2012 presidential election...
+```{r load_polls}
+library(realclearpolitics)
+
+# Scrape the table of polls
+url <- "https://www.realclearpolitics.com/epolls/2012/president/us/general_election_romney_vs_obama-1171.html"
+polls <- get_rcp_polls(url = url)
+head(polls)
+
+# "Tidy" it up
+tidied_polls <- tidy(polls)
+head(tidied_polls)
+```
+
+If we want the RCP moving average...
+```{r load_ma}
+ma <- get_rcp_ma(id = 1171)
+
+head(ma)
+
+plot(ma) +
+  ggplot2::ylim(0.4, 0.55) +
+  ggplot2::scale_color_manual(values = c('blue', 'red'))
+
+```

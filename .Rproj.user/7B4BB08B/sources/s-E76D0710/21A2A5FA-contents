@@ -1,0 +1,15 @@
+library(dplyr)
+library(ggplot2)
+library(jsonlite)
+library(rvest)
+
+
+library(devtools)
+
+document()
+
+load_all()
+
+check()
+
+
