@@ -1,7 +1,0 @@
-
-raw_site <- read_html("https://www.realclearpolitics.com/epolls/2020/president/nc/north_carolina_trump_vs_biden-6744.html")
-
-raw_site %>%
-  html_table() %>%
-  tail(1) %>% 
-  .[[1]]
