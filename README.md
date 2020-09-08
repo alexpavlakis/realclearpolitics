@@ -21,7 +21,8 @@ devtools::install_github("alexpavlakis/realclearpolitics")
 ## Example
 
 If we want to scrape the RCP table of national polls from the 2012
-presidential election…
+presidential election, we can enter the RCP URL of interest as the `url`
+arguement of `get_rcp_polls`.
 
 ``` r
 library(realclearpolitics)
@@ -54,7 +55,10 @@ head(tidied_polls)
 #> 6 ABC News/Wash Post   11/1       11/4            2345 LV          Obama …  0.5
 ```
 
-If we want the RCP moving average…
+If we want the RCP moving average, we can identify a race by its “id”,
+which can be be found in the URL (e.g., the id for 2012 Obama-Romeny
+national polls is 1171), and use that the scrape the raw data behind
+RCP’s charts.
 
 ``` r
 ma <- get_rcp_ma(id = 1171)
